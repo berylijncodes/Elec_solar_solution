@@ -46,6 +46,6 @@
     ]
   },
 
-  "proxy": "http://localhost5000"
+  "proxy": "http://localhost:5000"
 
 }
