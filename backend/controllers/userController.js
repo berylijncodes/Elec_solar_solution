@@ -34,5 +34,11 @@ const registerUser = asyncHandler(async (req, res) =>
             isAdmin: user.isAdmin,
             token: generateToken(user._id),
         });
+    } else
+    {
+        res.status(400)
+        throw new Error("Invalid User  Data")
     }
-})
+});
+
+module.exports = { registerUser };
