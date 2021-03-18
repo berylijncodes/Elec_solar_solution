@@ -46,7 +46,7 @@ const registerUser = asyncHandler(async (req, res) =>
 //@desc    Get all users
 //@access  Public
 
-const getAllUsers = asynHandler(async (req, res) =>
+const getAllUsers = asyncHandler(async (req, res) =>
 {
     const users = await User.find()
     res.json(users)
@@ -55,7 +55,7 @@ const getAllUsers = asynHandler(async (req, res) =>
 //@desc    login &  get user
 //@access  Public
 
-const loginUser = asynHandler(async (req, res) =>
+const loginUser = asyncHandler(async (req, res) =>
 {
     const { email, password } = req.body
     const user = await User.findOne({ email })

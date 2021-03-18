@@ -7,7 +7,7 @@ const { registerUser, getAllUsers, loginUser } = require("../controllers/userCon
 
 //Routes
 router.route("/").post(registerUser).get(getAllUsers)
-route.post("/login", loginUser)
+router.post("/login", loginUser)
 
 
 module.exports = router;
