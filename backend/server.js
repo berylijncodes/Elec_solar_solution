@@ -1,8 +1,9 @@
-const express = require('express');
-require('dotenv').config()
-const path = require('path');
-const {Notfound, errorHandler} = require('./middleware/errormiddleware')
-const connectDB = require('./config/db');
+const express = require("express");
+require("dotenv").config()
+const path = require("path");
+const { notFound, errorHandler } = require("./middleware/errormiddleware");
+const userRoutes = require("../backend/routes/userRoute");
+const connectDB = require("./config/db");
 
 
 const app = express();
@@ -13,10 +14,10 @@ connectDB();
 app.use(express.json({ extended: false }));
 
 //Define Routes
-
+app.use("/api/user", userRoutes)
 
 //middleware
-app.use(Notfound);
+app.use(notFound);
 
 const PORT = process.env.PORT || 5000
 

@@ -1,12 +1,11 @@
 import React from 'react'
 //assests
-import classes from './HomeScreen.module.css'
-import FemiCare from './assests/images/FemiCare.png';
-import Battery002 from './assests/images/Battery002.jpg';
+import classes from "./HomeScreen.module.css";
+import black from "../../assests/Images/black.jpg";
 
 
-const HomeScreen = () =>
-{
+const HomeScreen = () => {
+
     return (
         <div className={classes.screen_container}>
         
@@ -16,7 +15,7 @@ const HomeScreen = () =>
                     <h1 className={classes.title}>Ruby Sunday</h1>
                     <h1 className = {classes.title}>Photography</h1>
                 </div>
-            <img className = {classes.slide_image} src = {FemiCare} alt = 'FemiCare'/>
+            <img className = {classes.slide_image} src = {black} width= "100%" alt = "black"/>
 
             </div>
         </div>
