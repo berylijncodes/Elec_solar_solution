@@ -22,10 +22,10 @@ const userSchema = new mongoose.Schema({
     {timestamps: true}
 );
 
-userSchema.methods.matchPassword = async((enteredpassword) =>
+userSchema.methods.matchPassword = async function(enteredpassword) 
 {
     return await bcrypt.compare(enteredpassword, this.password);
-});
+};
 
 userSchema.pre('save,', async (next) =>
 {

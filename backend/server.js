@@ -1,9 +1,9 @@
 const express = require("express");
 require("dotenv").config()
 const path = require("path");
-const { notFound, errorHandler } = require('./middleware/errormiddleware');
+const { notFound, errorHandler } = require("./middleware/errormiddleware");
 const userRoutes = require("../backend/routes/userRoute");
-const connectDB = require('./config/db');
+const connectDB = require("./config/db");
 
 
 const app = express();
