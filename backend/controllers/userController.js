@@ -9,12 +9,11 @@ const User = require("../models/User");
 // @description  register & create token
 //@acess    public
 
-const registerUser = asyncHandler(async (req, res) =>
-{
-    const { name, email, User, password, isAdmin } = req.body
-    
-    const userExists = await User.findOne({ email })
-    if (userExist)
+const registerUser = asyncHandler(async (req, res) => {
+    const { name, email, password, isAdmin } = req.body //I have fit this line i was adding user as a parameter to the req.body
+    const userExists = await User.findOne({email })
+  
+    if (userExists)
     {
         res.status(400)
         throw new Error("User already exists")
@@ -30,7 +29,7 @@ const registerUser = asyncHandler(async (req, res) =>
         res.status(201).json({
             _id: user._id,
             name: user.name,
-            email: user_email,
+            email: user.email,
             isAdmin: user.isAdmin,
             token: generateToken(user._id),
         });
@@ -78,3 +77,4 @@ const loginUser = asyncHandler(async (req, res) =>
 
 
 module.exports = { registerUser ,getAllUsers, loginUser};
+
