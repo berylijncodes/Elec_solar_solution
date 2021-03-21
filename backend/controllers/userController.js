@@ -24,8 +24,7 @@ const registerUser = asyncHandler(async (req, res) => {
         password,
         isAdmin: isAdmin && isAdmin,
     });
-    if (user)
-    {
+    if (user){
         res.status(201).json({
             _id: user._id,
             name: user.name,
@@ -68,8 +67,7 @@ const loginUser = asyncHandler(async (req, res) =>
             token: generateToken(user._id)
             
         })
-    } else
-    {
+    } else {
         res.status(401)
         throw new Error("invalid Email or Password")
     }
