@@ -13,9 +13,7 @@ const  App = () => {
         <Route exact path = '/login' component = {LoginScreen}>
         </Route>
       </Switch>
-    </BrowserRouter>
-     
-  
+    </BrowserRouter>  
   );
 }
 
