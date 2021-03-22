@@ -2,8 +2,8 @@
 
 To get started Run this command:
 npx create-react-app .
-where the (.diot) is the react that directory
-To connect backend services to th frontend run this command:
+where the (.diot) is telling react to create the project on that current directory
+To create all the needed for the frontend run this command:
 
 npm i axios react-markdown react-redux redux redux-devtools-extension redux-thunk react-router-dom styled-components
 

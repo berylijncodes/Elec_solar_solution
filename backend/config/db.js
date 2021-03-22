@@ -13,13 +13,12 @@ const connectDB = async  () => {
     } catch (error)
     {
         console.error(error.message);
-        process.exit(1);
+        process.exit(0);
         
     };
 };
 
 
 module.exports = connectDB;
-
 
 
