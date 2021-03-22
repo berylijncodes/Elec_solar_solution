@@ -7,12 +7,12 @@ const blogSchema = new mongoose.Schema({
         required: true,
     },
 
-    Image: {
+    image: {
         type: String,
         required: true,
     },
 
-    Description: {
+    description: {
         type: String,
         required: true,
     },
