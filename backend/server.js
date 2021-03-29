@@ -2,7 +2,8 @@ const express = require("express");
 require("dotenv").config()
 const path = require("path");
 const { notFound, errorHandler } = require("./middleware/errormiddleware");
-const userRoutes = require("../backend/routes/userRoute");
+const userRoutes = require("../backend/routes/userRoutes");
+const blogRoutes = require("./routes/blogRoutes")
 const connectDB = require("./config/db");
 
 
@@ -15,6 +16,8 @@ app.use(express.json({ extended: false }));
 
 //Define Routes
 app.use("/api/user", userRoutes)
+app.use("/api/blog", blogRoutes)
+
 
 //middleware
 app.use(notFound);

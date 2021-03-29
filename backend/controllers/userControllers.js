@@ -66,7 +66,11 @@ const loginUser = asyncHandler(async (req, res) =>
             token: generateToken(user._id)
             
         })
+<<<<<<< HEAD:backend/controllers/userControllers.js
+    } else{
+=======
     } else {
+>>>>>>> d3370d7bc2d16df63d65a1ec739de152c9ff4d8e:backend/controllers/userController.js
         res.status(401)
         throw new Error("invalid Email or Password")
     }
