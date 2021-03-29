@@ -79,7 +79,7 @@ export const blogDetailsReducer = (state = { blog: {} }, action) =>{
             return {
                 loading: false,
                 sucess: true,
-                blog: action.payload
+                blog: action.payload,
             }
         case BLOG_DETAILS_FAIL:
             return { loading: false, error: action.payload }

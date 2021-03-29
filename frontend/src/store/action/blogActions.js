@@ -84,8 +84,6 @@ export const createBlog = () => async (dispatch,getState) =>{
     }
 }
 
-
-
 export const updateBlog = (blog) => async (dispatch,getState) =>{
     try{
         dispatch({ type: UPDATE_BLOG__REQUEST })
@@ -110,3 +108,7 @@ export const updateBlog = (blog) => async (dispatch,getState) =>{
         })
     }
 }
+
+
+
+
